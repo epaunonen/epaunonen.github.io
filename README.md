@@ -6,8 +6,8 @@
 ### NFL Analysis
 
 [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYmMyYWY2ZjgtNGM1ZC00ZGVjLWFhODMtYTY5OTM0N2I1YmJmIiwidCI6IjhkZWQ3ODVjLTJiYTYtNGIxYS05NmUyLWY3NGFiZTk2MWFiZCIsImMiOjh9)
-<br>
-<br>![NFL Dashboard game view](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/NFL/NFL_1.PNG?raw=true "Game view")
+<br><br>
+![NFL Dashboard game view](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/NFL/NFL_1.PNG?raw=true "Game view")
 
 This dashboard offers functionality for comparing NFL team performance and play type (e.g. running play, passing play) likelihood and yard gains.
 Additionally, it allows for a detailed view of any NFL game from 1999 to present day.
@@ -22,6 +22,8 @@ The learning goal of this project was to learn how to use Power BI for Dashboard
 
 ### "LiHy's Little Helper" - Telegram bot for event submissions (Python)
 
+[View Code](https://github.com/epaunonen/epaunonen.github.io/tree/main/Projects/LiHy's%20Little%20Helper)
+<br><br>
 ![LiHyBot](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/LiHyBot/LLH.PNG?raw=true "Telegram Bot")
 
 This bot was created for a student-run wellbeing event that ran from June to August 2022. The idea of the event was to make the participant document their summer through pictures. A Telegram chatbot was chosen as a submission platform as it is easily available for everyone, quick to use for picture submissions and allows for a neat UI implementation.
