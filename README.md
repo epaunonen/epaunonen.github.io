@@ -22,3 +22,4 @@ The learning goal of this project was to learn how to use Power BI for Dashboard
 
 ### "LiHy's Little Helper" - Telegram bot for event submissions
 
+![LiHyBot](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/LiHyBot/LLH.PNG?raw=true "Telegram Bot")
