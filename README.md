@@ -26,7 +26,7 @@ The learning goal of this project was to learn how to use Power BI for Dashboard
 
 This bot was created for a student-run wellbeing event that ran from June to August 2022. The idea of the event was to make the participant document their summer through pictures. A Telegram chatbot was chosen as a submission platform as it is easily available for everyone, quick to use for picture submissions and allows for a neat UI implementation.
 <br><br>
-The bot was developed using Python with [python-telegram-bot](https://python-telegram-bot.org/) as a wrapper for the Telegram bot api. As a feature request by the event organizers, the bot used Google Drive through drive api as the storage for the submissions. This was done to allow the organizers to conveniently access the pictures for verification. The bot was deployed to an Amazon EC2 instance, which was configured to automatically restart the process if a critical error occurred - a failsafe that was not triggered at all during the event.
+The bot was developed using Python with [python-telegram-bot](https://python-telegram-bot.org/) as a wrapper for the Telegram bot api. As a feature request by the event organizers, the bot used Google Drive, with drive api through a specifically created Google Service Account, as the storage for the submissions. This was done to allow the organizers to conveniently access the pictures for verification. The bot was deployed to an Amazon EC2 instance, which was configured to automatically restart the process if a critical error occurred - a failsafe that was not triggered at all during the event.
 
 **Stats:**
  - Used by 55 unique users
