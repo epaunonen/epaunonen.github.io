@@ -1,5 +1,5 @@
 # Projects
-<p>This portfolio will be a compilation of notebooks, dashboards and other standalone projects which I created for data analysis, machine learning or a specific application. The projects are divided by category.</p>
+<p>This portfolio will be a compilation of notebooks, dashboards and other standalone projects which I have created for data analysis, exploring machine learning or a specific application. The projects are divided by category.</p>
 
 ## Power BI Dashboards
 ### NFL Analysis
