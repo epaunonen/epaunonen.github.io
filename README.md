@@ -13,3 +13,4 @@ Functionality for predicting the outcome of a single play with full parameter co
 This project uses data provided by [nflfastR](https://www.nflfastr.com/index.html), a R package for obtaining NFL play-by-play data.<br>
 At the moment, a NoSQL database is built and updated locally by the package and afterwards the dashboard is refreshed with the updated data.<br>
 
+## Python
