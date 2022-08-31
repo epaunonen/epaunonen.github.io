@@ -28,11 +28,11 @@ This bot was created for a student-run wellbeing event, that ran from June to Au
 <br><br>
 The bot was developed using Python with [python-telegram-bot](https://python-telegram-bot.org/) as a wrapper for the Telegram bot api. As a feature request by the event organizers, the bot used Google Drive through drive api as the storage for the submissions. This was done to allow the organizers to conveniently access the pictures for verification. The bot was deployed to an Amazon EC2 instance, which was configured to automatically restart the process if a critical error occurred - a failsafe that was not triggered at all during the event.
 
-Stats:
+**Stats:**
  - Used by 55 unique users
  - 542 pictures submitted in total
  - 71 days
 
-Things I would do differently next time:
+**Things I would do differently next time:**
  - Error handling: As the bot was utilized by relatively few people and put together very quickly and the data sent through the bot was not deemed critical, I did not thorougly prepare for errors. I made a decision that if a picture submission failed, the bot would message the admin account (=me) with the error and forward the picture to me. After that I would manually submit the picture again. This ended up working fine as only 9 pictures encountered an error (1.7% of total), but for a larger application this would be unacceptable. It should be noted that all these errors were caused by the Telegram API not responding even after three retries.
  - Consider not using Google Drive for storage, as the api is cumbersome for an application like this.
