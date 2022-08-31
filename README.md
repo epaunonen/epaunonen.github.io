@@ -14,7 +14,7 @@ Additionally, it allows for a detailed view of any NFL game from 1999 to present
 Functionality for predicting the outcome of a single play with full parameter control is planned, but not yet at a working state.<br>
 <br>
 This project uses data provided by [nflfastR](https://www.nflfastr.com/index.html), a R package for obtaining NFL play-by-play data.<br>
-At the moment, a NoSQL database is built and updated locally by the package and afterwards the dashboard is refreshed with the updated data.<br>
+At the moment, a NoSQL database is built and updated locally by the package and afterwards the dashboard is refreshed from the updated database.<br>
 
 The learning goal of this project was to learn how to use Power BI for Dashboard creation, using a big datasource that needs a significant amount of preprocessing work in Power Query. Many of the visual heavily utilize custom DAX measures as the dataset structure necessitated this - the improved performance is an added bonus!
 
