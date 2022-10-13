@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FixAr.Vectors\FixAr.Vectors.csproj" />
+    <ProjectReference Include="..\FixAr\FixAr.csproj" />
+  </ItemGroup>
+
+</Project>
