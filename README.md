@@ -38,7 +38,8 @@ The bot was developed using Python with [python-telegram-bot](https://github.com
  - Error handling: As the bot was utilized by relatively few people and put together very quickly and the data sent through the bot was not deemed critical, I did not thorougly prepare for errors. I made a decision that if a picture submission failed, the bot would forward the picture as well as the error message to a specified admin account (=me). After that I would manually submit the picture again. This ended up working fine as only 9 pictures encountered an error (1.7% of total), but for a larger application this would be unacceptable. It should be noted that all these errors were caused by the Telegram API not responding even after two retries.
  - Consider not using Google Drive for storage, as the api is cumbersome and quite slow for an application like this.
 
-<br>
+
+
 ---
 ### FixAr - Fixed-point arithmetic library for C#
 
