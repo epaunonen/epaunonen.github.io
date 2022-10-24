@@ -13,7 +13,7 @@ This Power BI report offers functionality for comparing NFL team performance and
 Additionally, it allows for a detailed view of any NFL game from 1999 to present day.<br>
 <br>
 This project uses data provided by [nflfastR](https://www.nflfastr.com/index.html), a R package for obtaining NFL play-by-play data.<br>
-At the moment, a SQLite database is built and updated locally by the package and afterwards the dashboard is refreshed from the updated database.<br>
+nflfastR is used to populate a PostgreSQL database deployed on AWS Lightsail, from where the report is then periodically refreshed with new and/or corrected play-by-play data.<br>
 
 The learning goal of this project was to learn how to use Power BI for Dashboard creation, using a large datasource that needs a significant amount of preprocessing work in Power Query. Most functionality of the visuals is implemented using DAX measures.
 
