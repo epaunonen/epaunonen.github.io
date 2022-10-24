@@ -15,7 +15,7 @@ Additionally, it allows for a detailed view of any NFL game from 1999 to present
 This project uses data provided by [nflfastR](https://www.nflfastr.com/index.html), a R package for obtaining NFL play-by-play data.<br>
 The package is used to populate a PostgreSQL database deployed on AWS Lightsail, from which the report is then periodically refreshed with new and/or corrected play-by-play data.<br> During a NFL season (approx. August to mid-February), nflfastR is scheduled to rebuild the data from the ongoing season twice a week. This ensures that new games are available for the report as soon as possible.<br>
 
-The learning goal of this project was to learn how to use Power BI for report creation with a large dataset deployed to a cloud database. 
+The learning goal of this project was to learn how to use Power BI, and especially DAX, for efficient report creation with a large dataset. An additional topic of interest has been the automation of data refreshes, from the original data source to the database and from there to the Power BI report. 
 
 ## Standalone projects
 
