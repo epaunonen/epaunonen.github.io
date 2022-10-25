@@ -13,7 +13,7 @@ This Power BI report offers functionality for comparing NFL team performance and
 Additionally, it allows for a detailed view of any NFL game from 1999 to present day.<br>
 <br>
 This project uses data provided by [nflfastR](https://www.nflfastr.com/index.html), a R package for obtaining NFL play-by-play data.<br>
-A [R script](https://github.com/epaunonen/epaunonen.github.io/blob/main/NFL/db/UpdateDB.R) connects to and populates a PostgreSQL database deployed on AWS Lightsail, from which the report is then periodically refreshed with new and/or corrected play-by-play data using a Power BI gateway. During a NFL season *(approx. August to mid-February)*, the R script is scheduled to rebuild the data from the ongoing season twice a week. This ensures that new games are available for the report as soon as possible.<br>
+An [R script](https://github.com/epaunonen/epaunonen.github.io/blob/main/NFL/db/UpdateDB.R) connects to and populates a PostgreSQL database deployed on AWS Lightsail, from which the report is then periodically refreshed with new and/or corrected play-by-play data using a Power BI gateway. During a NFL season *(approx. August to mid-February)*, the R script is scheduled to rebuild the data from the ongoing season twice a week. This ensures that new games are available for the report as soon as possible.<br>
 
 The learning goal of this project was to learn how to use Power BI, and especially DAX, for efficient report creation with a large dataset. An additional topic of interest has been the automation of data refreshes, from the original data source to the database and from there to the Power BI report. 
 
