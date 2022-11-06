@@ -40,8 +40,13 @@ def create(host : str, port : str, dbname : str, user : str, password : str, tab
         conn.commit()
         print('Done!')
 
-def init_index(host : str, port : str, dbname : str, user : str, password : str, table_name : str):
-    pass
+def init_indexes(host : str, port : str, dbname : str, user : str, password : str, table_name : str):
+    print('Creating indexes!')
+    with pg.connect("host='{}' port='{}' dbname='{}' user='{}' password='{}'".format(host, port, dbname, user, password)) as conn:
+        with conn.cursor() as cur:
+            cur.execute('CREATE INDEX season_idx ON {} USING hash (season)'.format(table_name)) # season hash
+        conn.commit()
+    print('Done!')
 
 def run(args):
     if len(args) < 7: return print('Incorrect arguments specified, needs:\nhost, port, dbname, user, password, table_name, (optional) f=force rebuild, i=create indexes')
@@ -59,7 +64,7 @@ def run(args):
         if args[7] == 'f':
             MODE = 'f'
         elif args[7] == 'i':
-            init_index(host=HOST, port=PORT, dbname=DBNAME, user=USER, password=PASSWORD, table_name=TABLE_NAME)
+            init_indexes(host=HOST, port=PORT, dbname=DBNAME, user=USER, password=PASSWORD, table_name=TABLE_NAME)
             return
             
     create(host=HOST, port=PORT, dbname=DBNAME, user=USER, password=PASSWORD, table_name=TABLE_NAME, mode=MODE)
