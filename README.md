@@ -9,11 +9,10 @@
 <br><br>
 ![NFL Report game view](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/NFL/NFL_1.PNG?raw=true "Game view")
 
-This Power BI report offers functionality for comparing NFL team performance and play type (e.g. running play, passing play) likelihood and yard gains.
-Additionally, it allows for a detailed view of any NFL game from 1999 to present day.<br>
+This Power BI report is a comprehensive tool for monitoring and comparing NFL team performance, analyzing play type (e.g. running play, passing play) likelihood, predicting yard gains per play and viewing the progress of any NFL game from 1999 to the present day - play-by-play.<br>
 <br>
-This project uses data provided by [nflfastR](https://www.nflfastr.com/index.html), a R package for obtaining NFL play-by-play data.<br>
-An [R script](https://github.com/epaunonen/epaunonen.github.io/blob/main/NFL/db/UpdateDB.R) connects to and populates a PostgreSQL database deployed on AWS Lightsail, from which the report is then periodically refreshed with new and/or corrected play-by-play data using a Power BI gateway. During a NFL season *(approx. August to mid-February)*, the R script is scheduled to rebuild the data from the ongoing season twice a week. This ensures that new games are available for the report as soon as possible.<br>
+This project utilizes data releases provided by [nflverse](https://github.com/nflverse/nflverse-data/releases), a project dedicated to NFL data.<br>
+The dataset is deployed on a simple PostgreSQL database running on Amazon Lightsail. Power BI periodically refreshes the data from the database via a PBI gateway service. A [python script](https://github.com/epaunonen/epaunonen.github.io/blob/main/NFL/db/update_pbp.py) is deployed on AWS Lambda and scheduled to run regularly during an ongoing NFL season. The script refreshes the play-by-play data in the database from the nflverse releases, which keeps the dataset and the report up-to-date ensuring that new games are available as soon as possible. During offseason, the script(s) can be used to rebuild the database in case, for example, variables are added or removed.
 
 The learning goal of this project was to learn how to use Power BI, and especially DAX, for efficient report creation with a large dataset. An additional topic of interest has been the automation of data refreshes, from the original data source to the database and from there to the Power BI report. 
 
