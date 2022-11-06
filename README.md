@@ -20,7 +20,7 @@ Learning goals for this project:
  * Simple PostgreSQL database deployment and management.
  * Managing data in the database with Python
  * Creating a complete pipeline, from original datasource to a database and from there to Power BI, with automatic refreshes and monitoring
-   - Deploying services on AWS
+   - Deploying services on AWS (Lamda, CloudWatch, Lightsail)
 
 ## Standalone projects
 
