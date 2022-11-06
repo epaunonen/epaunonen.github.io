@@ -1,0 +1,112 @@
+import datetime
+import sys
+import psycopg as pg
+from urllib.request import urlopen
+import csv
+
+def purgeSeasons(cur : pg.Cursor, table_name : str, seasons : list):
+    s = '(' + ','.join(map(str, seasons)) + ')'
+    cur.execute('DELETE FROM {} WHERE season IN {}'.format(table_name, s))
+    
+def addSeason(cur : pg.Cursor, table_name : str, season : int):
+    
+    cur.execute('CREATE TEMP TABLE tmp_table ON COMMIT DROP AS SELECT * FROM {} WITH NO DATA'.format(table_name))
+    
+    url = 'https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{}.csv'.format(season)
+    with urlopen(url) as response:
+        lines = [l.decode('utf-8') for l in response.readlines()]
+        file = csv.reader(lines)
+        
+        #with cur.copy('COPY {} FROM STDIN'.format(table_name)) as copy:
+        with cur.copy('COPY tmp_table FROM STDIN'.format(table_name)) as copy:
+            rc = 0
+            
+            for row in [row for row in file][1:]:
+                rc += 1
+                print('   Row {}'.format(rc), end='\r', flush=True)
+                
+                for i in range(len(row)):
+                    if row[i] == '': row[i] = None
+                
+                copy.write_row(row) 
+                
+        cur.execute('INSERT INTO {} SELECT * FROM tmp_table ON CONFLICT DO NOTHING'.format(table_name))
+        cur.execute('DROP TABLE tmp_table')
+                
+    
+def rebuild(host : str, port : str, dbname : str, user : str, password : str, table_name : str, seasons : list, logic : str):
+    
+    # Connect to db
+    with pg.connect("host='{}' port='{}' dbname='{}' user='{}' password='{}'".format(host, port, dbname, user, password)) as conn:
+        
+        # Create cursor
+        with conn.cursor() as cur:
+           
+            # Delete data from selected seasons
+            if 'D' in logic:
+                print('Purging data from season(s) {}...'.format(seasons))
+                purgeSeasons(cur, table_name, seasons)
+                print('===== Complete =====\n')
+               
+            # Download and add data from selected seasons to the db
+            if 'R' in logic:
+                print('Downloading data...')
+                for season in seasons:
+                    print('==== Season {} ==='.format(season))
+                    addSeason(cur, table_name, season)
+                    print('\n')
+            
+        conn.commit()
+        print('===== Complete =====')
+
+def run(args):
+    if len(args) < 9: return print('Incorrect arguments specified, specify:\nhost, port, dbname, user, password, table_name,\nseasons\n(a=all, c=current, or specify years yyyy,...),\noperation logic (d=delete, r=delete and rebuild, u=update)')
+    
+    # get params from arguments
+    HOST = args[1]
+    PORT = args[2]
+    DBNAME = args[3]
+    USER = args[4]
+    PASSWORD = args[5]
+    TABLE_NAME = args[6]
+    
+    # seasons
+    if args[7] == 'a':
+        curr_year = datetime.date.today().year
+        if datetime.date.today() >= datetime.date(curr_year, 9, 1): 
+            # current year season has started
+            lim = curr_year + 1
+        else: 
+            # current year season has not yet started
+            lim = curr_year 
+        SEASONS = list(range(1999, lim))
+    
+    elif args[7] == 'c':
+        curr_year = datetime.date.today().year
+        if datetime.date.today() >= datetime.date(curr_year, 9, 1): 
+            SEASONS = [curr_year]
+        else:
+            SEASONS = [curr_year - 1]
+    
+    else: SEASONS = [int(i) for i in args[7].split(',')]
+    
+    # logic
+    if args[8] == 'd':
+        LOGIC = 'D'
+        print('Logic: Delete data')
+    elif args[8] == 'r':
+        LOGIC = 'DR'
+        print('Logic: Clean rebuild')
+    elif args[8] == 'u':
+        LOGIC = 'R'
+        print('Logic: Update diff')
+        raise Exception('u Not implemented yet!')
+    else: raise Exception("Incorrect operation logic specified, use 'd', 'r' or 'u'!")
+    
+    rebuild(host=HOST, port=PORT, dbname=DBNAME, user=USER, password=PASSWORD, table_name=TABLE_NAME, seasons=SEASONS, logic=LOGIC)
+     
+def main():
+    run(sys.argv)
+    
+if __name__ == '__main__':
+    main()

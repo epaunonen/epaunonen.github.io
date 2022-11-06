@@ -1,0 +1,373 @@
+play_id                              | integer          |           |          |
+game_id                              | text             |           |          |
+old_game_id                          | text             |           |          |
+home_team                            | text             |           |          |
+away_team                            | text             |           |          |
+season_type                          | text             |           |          |
+week                                 | integer          |           |          |
+posteam                              | text             |           |          |
+posteam_type                         | text             |           |          |
+defteam                              | text             |           |          |
+side_of_field                        | text             |           |          |
+yardline_100                         | integer          |           |          |
+game_date                            | text             |           |          |
+quarter_seconds_remaining            | integer          |           |          |
+half_seconds_remaining               | integer          |           |          |
+game_seconds_remaining               | integer          |           |          |
+game_half                            | text             |           |          |
+quarter_end                          | integer          |           |          |
+drive                                | integer          |           |          |
+sp                                   | integer          |           |          |
+qtr                                  | integer          |           |          |
+down                                 | integer          |           |          |
+goal_to_go                           | integer          |           |          |
+time                                 | text             |           |          |
+yrdln                                | text             |           |          |
+ydstogo                              | integer          |           |          |
+ydsnet                               | integer          |           |          |
+"desc"                               | text             |           |          |
+play_type                            | text             |           |          |
+yards_gained                         | integer          |           |          |
+shotgun                              | integer          |           |          |
+no_huddle                            | integer          |           |          |
+qb_dropback                          | integer          |           |          |
+qb_kneel                             | integer          |           |          |
+qb_spike                             | integer          |           |          |
+qb_scramble                          | integer          |           |          |
+pass_length                          | text             |           |          |
+pass_location                        | text             |           |          |
+air_yards                            | double precision |           |          |
+yards_after_catch                    | double precision |           |          |
+run_location                         | text             |           |          |
+run_gap                              | text             |           |          |
+field_goal_result                    | text             |           |          |
+kick_distance                        | double precision |           |          |
+extra_point_result                   | text             |           |          |
+two_point_conv_result                | text             |           |          |
+home_timeouts_remaining              | integer          |           |          |
+away_timeouts_remaining              | integer          |           |          |
+timeout                              | integer          |           |          |
+timeout_team                         | text             |           |          |
+td_team                              | text             |           |          |
+td_player_name                       | text             |           |          |
+td_player_id                         | text             |           |          |
+posteam_timeouts_remaining           | integer          |           |          |
+defteam_timeouts_remaining           | integer          |           |          |
+total_home_score                     | integer          |           |          |
+total_away_score                     | integer          |           |          |
+posteam_score                        | integer          |           |          |
+defteam_score                        | integer          |           |          |
+score_differential                   | integer          |           |          |
+posteam_score_post                   | integer          |           |          |
+defteam_score_post                   | integer          |           |          |
+score_differential_post              | integer          |           |          |
+no_score_prob                        | double precision |           |          |
+opp_fg_prob                          | double precision |           |          |
+opp_safety_prob                      | double precision |           |          |
+opp_td_prob                          | double precision |           |          |
+fg_prob                              | double precision |           |          |
+safety_prob                          | double precision |           |          |
+td_prob                              | double precision |           |          |
+extra_point_prob                     | double precision |           |          |
+two_point_conversion_prob            | double precision |           |          |
+ep                                   | double precision |           |          |
+epa                                  | double precision |           |          |
+total_home_epa                       | double precision |           |          |
+total_away_epa                       | double precision |           |          |
+total_home_rush_epa                  | double precision |           |          |
+total_away_rush_epa                  | double precision |           |          |
+total_home_pass_epa                  | double precision |           |          |
+total_away_pass_epa                  | double precision |           |          |
+air_epa                              | double precision |           |          |
+yac_epa                              | double precision |           |          |
+comp_air_epa                         | double precision |           |          |
+comp_yac_epa                         | double precision |           |          |
+total_home_comp_air_epa              | double precision |           |          |
+total_away_comp_air_epa              | double precision |           |          |
+total_home_comp_yac_epa              | double precision |           |          |
+total_away_comp_yac_epa              | double precision |           |          |
+total_home_raw_air_epa               | double precision |           |          |
+total_away_raw_air_epa               | double precision |           |          |
+total_home_raw_yac_epa               | double precision |           |          |
+total_away_raw_yac_epa               | double precision |           |          |
+wp                                   | double precision |           |          |
+def_wp                               | double precision |           |          |
+home_wp                              | double precision |           |          |
+away_wp                              | double precision |           |          |
+wpa                                  | double precision |           |          |
+vegas_wpa                            | double precision |           |          |
+vegas_home_wpa                       | double precision |           |          |
+home_wp_post                         | double precision |           |          |
+away_wp_post                         | double precision |           |          |
+vegas_wp                             | double precision |           |          |
+vegas_home_wp                        | double precision |           |          |
+total_home_rush_wpa                  | double precision |           |          |
+total_away_rush_wpa                  | double precision |           |          |
+total_home_pass_wpa                  | double precision |           |          |
+total_away_pass_wpa                  | double precision |           |          |
+air_wpa                              | double precision |           |          |
+yac_wpa                              | double precision |           |          |
+comp_air_wpa                         | double precision |           |          |
+comp_yac_wpa                         | double precision |           |          |
+total_home_comp_air_wpa              | double precision |           |          |
+total_away_comp_air_wpa              | double precision |           |          |
+total_home_comp_yac_wpa              | double precision |           |          |
+total_away_comp_yac_wpa              | double precision |           |          |
+total_home_raw_air_wpa               | double precision |           |          |
+total_away_raw_air_wpa               | double precision |           |          |
+total_home_raw_yac_wpa               | double precision |           |          |
+total_away_raw_yac_wpa               | double precision |           |          |
+punt_blocked                         | double precision |           |          |
+first_down_rush                      | double precision |           |          |
+first_down_pass                      | double precision |           |          |
+first_down_penalty                   | double precision |           |          |
+third_down_converted                 | double precision |           |          |
+third_down_failed                    | double precision |           |          |
+fourth_down_converted                | double precision |           |          |
+fourth_down_failed                   | double precision |           |          |
+incomplete_pass                      | double precision |           |          |
+touchback                            | double precision |           |          |
+interception                         | double precision |           |          |
+punt_inside_twenty                   | double precision |           |          |
+punt_in_endzone                      | double precision |           |          |
+punt_out_of_bounds                   | double precision |           |          |
+punt_downed                          | double precision |           |          |
+punt_fair_catch                      | double precision |           |          |
+kickoff_inside_twenty                | double precision |           |          |
+kickoff_in_endzone                   | double precision |           |          |
+kickoff_out_of_bounds                | double precision |           |          |
+kickoff_downed                       | double precision |           |          |
+kickoff_fair_catch                   | double precision |           |          |
+fumble_forced                        | double precision |           |          |
+fumble_not_forced                    | double precision |           |          |
+fumble_out_of_bounds                 | double precision |           |          |
+solo_tackle                          | double precision |           |          |
+safety                               | double precision |           |          |
+penalty                              | double precision |           |          |
+tackled_for_loss                     | double precision |           |          |
+fumble_lost                          | double precision |           |          |
+own_kickoff_recovery                 | double precision |           |          |
+own_kickoff_recovery_td              | double precision |           |          |
+qb_hit                               | double precision |           |          |
+rush_attempt                         | double precision |           |          |
+pass_attempt                         | double precision |           |          |
+sack                                 | double precision |           |          |
+touchdown                            | double precision |           |          |
+pass_touchdown                       | double precision |           |          |
+rush_touchdown                       | double precision |           |          |
+return_touchdown                     | double precision |           |          |
+extra_point_attempt                  | double precision |           |          |
+two_point_attempt                    | double precision |           |          |
+field_goal_attempt                   | double precision |           |          |
+kickoff_attempt                      | double precision |           |          |
+punt_attempt                         | double precision |           |          |
+fumble                               | double precision |           |          |
+complete_pass                        | double precision |           |          |
+assist_tackle                        | double precision |           |          |
+lateral_reception                    | double precision |           |          |
+lateral_rush                         | double precision |           |          |
+lateral_return                       | double precision |           |          |
+lateral_recovery                     | double precision |           |          |
+passer_player_id                     | text             |           |          |
+passer_player_name                   | text             |           |          |
+passing_yards                        | double precision |           |          |
+receiver_player_id                   | text             |           |          |
+receiver_player_name                 | text             |           |          |
+receiving_yards                      | double precision |           |          |
+rusher_player_id                     | text             |           |          |
+rusher_player_name                   | text             |           |          |
+rushing_yards                        | double precision |           |          |
+lateral_receiver_player_id           | text             |           |          |
+lateral_receiver_player_name         | text             |           |          |
+lateral_receiving_yards              | double precision |           |          |
+lateral_rusher_player_id             | text             |           |          |
+lateral_rusher_player_name           | text             |           |          |
+lateral_rushing_yards                | double precision |           |          |
+lateral_sack_player_id               | text             |           |          |
+lateral_sack_player_name             | text             |           |          |
+interception_player_id               | text             |           |          |
+interception_player_name             | text             |           |          |
+lateral_interception_player_id       | text             |           |          |
+lateral_interception_player_name     | text             |           |          |
+punt_returner_player_id              | text             |           |          |
+punt_returner_player_name            | text             |           |          |
+lateral_punt_returner_player_id      | text             |           |          |
+lateral_punt_returner_player_name    | text             |           |          |
+kickoff_returner_player_name         | text             |           |          |
+kickoff_returner_player_id           | text             |           |          |
+lateral_kickoff_returner_player_id   | text             |           |          |
+lateral_kickoff_returner_player_name | text             |           |          |
+punter_player_id                     | text             |           |          |
+punter_player_name                   | text             |           |          |
+kicker_player_name                   | text             |           |          |
+kicker_player_id                     | text             |           |          |
+own_kickoff_recovery_player_id       | text             |           |          |
+own_kickoff_recovery_player_name     | text             |           |          |
+blocked_player_id                    | text             |           |          |
+blocked_player_name                  | text             |           |          |
+tackle_for_loss_1_player_id          | text             |           |          |
+tackle_for_loss_1_player_name        | text             |           |          |
+tackle_for_loss_2_player_id          | text             |           |          |
+tackle_for_loss_2_player_name        | text             |           |          |
+qb_hit_1_player_id                   | text             |           |          |
+qb_hit_1_player_name                 | text             |           |          |
+qb_hit_2_player_id                   | text             |           |          |
+qb_hit_2_player_name                 | text             |           |          |
+forced_fumble_player_1_team          | text             |           |          |
+forced_fumble_player_1_player_id     | text             |           |          |
+forced_fumble_player_1_player_name   | text             |           |          |
+forced_fumble_player_2_team          | text             |           |          |
+forced_fumble_player_2_player_id     | text             |           |          |
+forced_fumble_player_2_player_name   | text             |           |          |
+solo_tackle_1_team                   | text             |           |          |
+solo_tackle_2_team                   | text             |           |          |
+solo_tackle_1_player_id              | text             |           |          |
+solo_tackle_2_player_id              | text             |           |          |
+solo_tackle_1_player_name            | text             |           |          |
+solo_tackle_2_player_name            | text             |           |          |
+assist_tackle_1_player_id            | text             |           |          |
+assist_tackle_1_player_name          | text             |           |          |
+assist_tackle_1_team                 | text             |           |          |
+assist_tackle_2_player_id            | text             |           |          |
+assist_tackle_2_player_name          | text             |           |          |
+assist_tackle_2_team                 | text             |           |          |
+assist_tackle_3_player_id            | text             |           |          |
+assist_tackle_3_player_name          | text             |           |          |
+assist_tackle_3_team                 | text             |           |          |
+assist_tackle_4_player_id            | text             |           |          |
+assist_tackle_4_player_name          | text             |           |          |
+assist_tackle_4_team                 | text             |           |          |
+tackle_with_assist                   | double precision |           |          |
+tackle_with_assist_1_player_id       | text             |           |          |
+tackle_with_assist_1_player_name     | text             |           |          |
+tackle_with_assist_1_team            | text             |           |          |
+tackle_with_assist_2_player_id       | text             |           |          |
+tackle_with_assist_2_player_name     | text             |           |          |
+tackle_with_assist_2_team            | text             |           |          |
+pass_defense_1_player_id             | text             |           |          |
+pass_defense_1_player_name           | text             |           |          |
+pass_defense_2_player_id             | text             |           |          |
+pass_defense_2_player_name           | text             |           |          |
+fumbled_1_team                       | text             |           |          |
+fumbled_1_player_id                  | text             |           |          |
+fumbled_1_player_name                | text             |           |          |
+fumbled_2_player_id                  | text             |           |          |
+fumbled_2_player_name                | text             |           |          |
+fumbled_2_team                       | text             |           |          |
+fumble_recovery_1_team               | text             |           |          |
+fumble_recovery_1_yards              | double precision |           |          |
+fumble_recovery_1_player_id          | text             |           |          |
+fumble_recovery_1_player_name        | text             |           |          |
+fumble_recovery_2_team               | text             |           |          |
+fumble_recovery_2_yards              | double precision |           |          |
+fumble_recovery_2_player_id          | text             |           |          |
+fumble_recovery_2_player_name        | text             |           |          |
+sack_player_id                       | text             |           |          |
+sack_player_name                     | text             |           |          |
+half_sack_1_player_id                | text             |           |          |
+half_sack_1_player_name              | text             |           |          |
+half_sack_2_player_id                | text             |           |          |
+half_sack_2_player_name              | text             |           |          |
+return_team                          | text             |           |          |
+return_yards                         | double precision |           |          |
+penalty_team                         | text             |           |          |
+penalty_player_id                    | text             |           |          |
+penalty_player_name                  | text             |           |          |
+penalty_yards                        | double precision |           |          |
+replay_or_challenge                  | double precision |           |          |
+replay_or_challenge_result           | text             |           |          |
+penalty_type                         | text             |           |          |
+defensive_two_point_attempt          | double precision |           |          |
+defensive_two_point_conv             | double precision |           |          |
+defensive_extra_point_attempt        | double precision |           |          |
+defensive_extra_point_conv           | double precision |           |          |
+safety_player_name                   | text             |           |          |
+safety_player_id                     | text             |           |          |
+season                               | integer          |           |          |
+cp                                   | double precision |           |          |
+cpoe                                 | double precision |           |          |
+series                               | double precision |           |          |
+series_success                       | double precision |           |          |
+series_result                        | text             |           |          |
+order_sequence                       | double precision |           |          |
+start_time                           | text             |           |          |
+time_of_day                          | text             |           |          |
+stadium                              | text             |           |          |
+weather                              | text             |           |          |
+nfl_api_id                           | text             |           |          |
+play_clock                           | text             |           |          |
+play_deleted                         | double precision |           |          |
+play_type_nfl                        | text             |           |          |
+special_teams_play                   | double precision |           |          |
+st_play_type                         | text             |           |          |
+end_clock_time                       | text             |           |          |
+end_yard_line                        | text             |           |          |
+fixed_drive                          | double precision |           |          |
+fixed_drive_result                   | text             |           |          |
+drive_real_start_time                | text             |           |          |
+drive_play_count                     | double precision |           |          |
+drive_time_of_possession             | text             |           |          |
+drive_first_downs                    | double precision |           |          |
+drive_inside20                       | double precision |           |          |
+drive_ended_with_score               | double precision |           |          |
+drive_quarter_start                  | double precision |           |          |
+drive_quarter_end                    | double precision |           |          |
+drive_yards_penalized                | double precision |           |          |
+drive_start_transition               | text             |           |          |
+drive_end_transition                 | text             |           |          |
+drive_game_clock_start               | text             |           |          |
+drive_game_clock_end                 | text             |           |          |
+drive_start_yard_line                | text             |           |          |
+drive_end_yard_line                  | text             |           |          |
+drive_play_id_started                | double precision |           |          |
+drive_play_id_ended                  | double precision |           |          |
+away_score                           | integer          |           |          |
+home_score                           | integer          |           |          |
+location                             | text             |           |          |
+result                               | integer          |           |          |
+total                                | integer          |           |          |
+spread_line                          | double precision |           |          |
+total_line                           | double precision |           |          |
+div_game                             | integer          |           |          |
+roof                                 | text             |           |          |
+surface                              | text             |           |          |
+temp                                 | integer          |           |          |
+wind                                 | integer          |           |          |
+home_coach                           | text             |           |          |
+away_coach                           | text             |           |          |
+stadium_id                           | text             |           |          |
+game_stadium                         | text             |           |          |
+aborted_play                         | double precision |           |          |
+success                              | double precision |           |          |
+passer                               | text             |           |          |
+passer_jersey_number                 | integer          |           |          |
+rusher                               | text             |           |          |
+rusher_jersey_number                 | integer          |           |          |
+receiver                             | text             |           |          |
+receiver_jersey_number               | integer          |           |          |
+pass                                 | double precision |           |          |
+rush                                 | double precision |           |          |
+first_down                           | double precision |           |          |
+special                              | double precision |           |          |
+play                                 | double precision |           |          |
+passer_id                            | text             |           |          |
+rusher_id                            | text             |           |          |
+receiver_id                          | text             |           |          |
+name                                 | text             |           |          |
+jersey_number                        | integer          |           |          |
+id                                   | text             |           |          |
+fantasy_player_name                  | text             |           |          |
+fantasy_player_id                    | text             |           |          |
+fantasy                              | text             |           |          |
+fantasy_id                           | text             |           |          |
+out_of_bounds                        | double precision |           |          |
+home_opening_kickoff                 | double precision |           |          |
+qb_epa                               | double precision |           |          |
+xyac_epa                             | double precision |           |          |
+xyac_mean_yardage                    | double precision |           |          |
+xyac_median_yardage                  | double precision |           |          |
+xyac_success                         | double precision |           |          |
+xyac_fd                              | double precision |           |          |
+xpass                                | double precision |           |          |
+pass_oe                              | double precision |           |          |
+PRIMARY KEY (play_id, game_id)       |                  |           |          | 
