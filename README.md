@@ -12,9 +12,15 @@
 This Power BI report is a comprehensive tool for monitoring and comparing NFL team performance, analyzing play type (e.g. running play, passing play) likelihood, predicting yard gains per play and viewing the progress of any NFL game from 1999 to the present day - play-by-play.<br>
 <br>
 This project utilizes data releases provided by [nflverse](https://github.com/nflverse/nflverse-data/releases), a project dedicated to NFL data.<br>
-The dataset is deployed on a simple PostgreSQL database running on Amazon Lightsail. Power BI periodically refreshes the data from the database via a PBI gateway service. A [python script](https://github.com/epaunonen/epaunonen.github.io/blob/main/NFL/db/update_pbp.py) is deployed on AWS Lambda and scheduled to run regularly during an ongoing NFL season. The script refreshes the play-by-play data in the database from the nflverse releases, which keeps the dataset and the report up-to-date ensuring that new games are available as soon as possible. During offseason, the script(s) can be used to rebuild the database in case, for example, variables are added or removed.
+The dataset is deployed on a simple PostgreSQL database running on Amazon Lightsail. Power BI periodically refreshes the data from the database via a PBI gateway service. A [Python script](https://github.com/epaunonen/epaunonen.github.io/blob/main/NFL/db/update_pbp.py) is deployed on AWS Lambda and scheduled to run regularly during an ongoing NFL season. The script refreshes the play-by-play data in the database from the nflverse releases, which keeps the dataset and the report up-to-date ensuring that new games are available as soon as possible. During offseason, the script(s) can be used to rebuild the database in case, for example, variables are added or removed.
 
-The learning goal of this project was to learn how to use Power BI, and especially DAX, for efficient report creation with a large dataset. An additional topic of interest has been the automation of data refreshes, from the original data source to the database and from there to the Power BI report. 
+Learning goals for this project:
+ * Learning to use Power BI (and as an extension, DAX) for efficient and diverse report creation. 
+   - Dealing with a large, and quite challenging, dataset.
+ * Simple PostgreSQL database deployment and management.
+ * Managing data in the database with Python
+ * Creating a complete pipeline, from original datasource to a database and from there to Power BI, with automatic refreshes and monitoring
+   - Deploying services on AWS
 
 ## Standalone projects
 
