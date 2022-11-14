@@ -1,8 +1,9 @@
 import datetime
 import sys
-import psycopg as pg
 from urllib.request import urlopen
-import csv
+
+import pg8000.dbapi as pg
+
 
 def purgeSeasons(cur : pg.Cursor, table_name : str, seasons : list):
     s = '(' + ','.join(map(str, seasons)) + ')'
@@ -14,21 +15,10 @@ def addSeason(cur : pg.Cursor, table_name : str, season : int):
     
     url = 'https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{}.csv'.format(season)
     with urlopen(url) as response:
-        lines = [l.decode('utf-8') for l in response.readlines()]
-        file = csv.reader(lines)
-        
-        #with cur.copy('COPY {} FROM STDIN'.format(table_name)) as copy:
-        with cur.copy('COPY tmp_table FROM STDIN'.format(table_name)) as copy:
-            rc = 0
-            
-            for row in [row for row in file][1:]:
-                rc += 1
-                print('   Row {}'.format(rc), end='\r', flush=True)
-                
-                for i in range(len(row)):
-                    if row[i] == '': row[i] = None
-                
-                copy.write_row(row) 
+        file = [l.decode('utf-8') for l in response.readlines()]
+
+        cur.execute('COPY tmp_table FROM STDIN WITH (FORMAT CSV)', stream=file[1:])
+        print('Inserted {} rows.'.format(len(file)-1))
                 
         cur.execute('INSERT INTO {} SELECT * FROM tmp_table ON CONFLICT DO NOTHING'.format(table_name))
         cur.execute('DROP TABLE tmp_table')
@@ -36,25 +26,24 @@ def addSeason(cur : pg.Cursor, table_name : str, season : int):
     
 def rebuild(host : str, port : str, dbname : str, user : str, password : str, table_name : str, seasons : list, logic : str):
     
-    # Connect to db
-    with pg.connect("host='{}' port='{}' dbname='{}' user='{}' password='{}'".format(host, port, dbname, user, password)) as conn:
+    with pg.connect(host=host, port=port, database=dbname, user=user, password=password) as conn:
         
         # Create cursor
-        with conn.cursor() as cur:
+        cur = conn.cursor()
            
-            # Delete data from selected seasons
-            if 'D' in logic:
-                print('Purging data from season(s) {}...'.format(seasons))
-                purgeSeasons(cur, table_name, seasons)
-                print('===== Complete =====\n')
-               
-            # Download and add data from selected seasons to the db
-            if 'R' in logic:
-                print('Downloading data...')
-                for season in seasons:
-                    print('==== Season {} ==='.format(season))
-                    addSeason(cur, table_name, season)
-                    print('\n')
+        # Delete data from selected seasons
+        if 'D' in logic:
+            print('Purging data from season(s) {}...'.format(seasons))
+            purgeSeasons(cur, table_name, seasons)
+            print('===== Complete =====\n')
+            
+        # Download and add data from selected seasons to the db
+        if 'R' in logic:
+            print('Downloading data...')
+            for season in seasons:
+                print('==== Season {} ==='.format(season))
+                addSeason(cur, table_name, season)
+                print('\n')
             
         conn.commit()
         print('===== Complete =====')
