@@ -22,6 +22,13 @@ Learning goals for this project:
  * Creating a complete pipeline, from original datasource to a database and from there to Power BI, with automatic refreshes and monitoring
    - Deploying services on AWS (Lambda, EventBridge, Lightsail)
 
+## Notebooks
+
+### Room Occupancy Estimation
+[View Notebook](https://github.com/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20estimation/Room_occupacy.ipynb)
+![Room occupancy](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Room%20occupancy/img1.PNG "Result")
+
+
 ## Standalone projects
 
 ### "LiHy's Little Helper" - Telegram bot for event submissions (Python)
