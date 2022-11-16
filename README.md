@@ -24,7 +24,7 @@ Learning goals for this project:
 
 ## Notebooks
 
-### Room Occupancy Estimation
+### Classification: Room Occupancy Estimation
 [View Notebook](https://github.com/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20estimation/Room_occupacy.ipynb)
 <br><br>
 ![Room occupancy](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Room%20occupancy/img1.PNG "Result")
