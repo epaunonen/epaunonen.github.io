@@ -30,8 +30,8 @@ Learning goals for this project:
 ![Room occupancy](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Room%20occupancy/img1.PNG "Result")
 
 In this simple machine learning project, room occupancy count (0-3 people) is estimated using Logistic Regression and MLP. <br>
-The aim of this project was to practice data exploration, classification and model tuning using a easily approachable dataset. 
-
+The aim of this project was to practice the overall process of creating a ML model, data exploration and model tuning using a easily approachable dataset. 
+The problem is a classification task which allowed for implementing and comparing different classification methods. 
 
 ## Standalone projects
 
