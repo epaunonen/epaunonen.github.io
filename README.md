@@ -17,8 +17,8 @@ The dataset is deployed on a simple PostgreSQL database running on Amazon Lights
 Learning goals for this project:
  * Learning to use Power BI (and as an extension, DAX) for efficient and diverse report creation. 
    - Dealing with a large, and quite challenging, dataset.
- * Simple PostgreSQL database deployment and management.
- * Managing data in the database with Python
+ * PostgreSQL database deployment and management.
+ * Managing data in the database with Python and SQL
  * Creating a complete pipeline, from original datasource to a database and from there to Power BI, with automatic refreshes and monitoring
    - Deploying services on AWS (Lambda, EventBridge, Lightsail)
 
