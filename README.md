@@ -52,7 +52,7 @@ Learning goals for this project:
 ### Room Occupancy Classification
 [**View Notebook on Github**](https://github.com/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20classification/Room_occupancy.ipynb) | [**nbviewer**](https://nbviewer.org/github/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20classification/Room_occupancy.ipynb)
 <br><br>
-![Room occupancy](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Room%20occupancy/img1.PNG "Result")
+![Room occupancy](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Room%20occupancy/img1.PNG)
 
 In this simple machine learning project, room occupancy count (0-3 people) is estimated using Logistic Regression and MLP. <br>
 The aim of this project was to practice the overall process of creating a ML model, data exploration and model tuning using a easily approachable dataset. 
