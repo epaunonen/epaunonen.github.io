@@ -4,19 +4,19 @@
 
 | Power BI & Data Processing <img width=100/> | | <img width=307/> |
 | --- |:-----:|:---:|
-| NFL Analysis Report and Pipeline  | [Link](https://github.com/epaunonen/epaunonen.github.io/edit/main/README.md#power-bi-nfl-analysis-report-and-pipeline) | *Power BI*, *AWS*, *SQL*, *Python* |
+| NFL Analysis Report and Pipeline  | [Link](https://github.com/epaunonen/epaunonen.github.io/blob/main/README.md#power-bi-nfl-analysis-report-and-pipeline) | *Power BI*, *AWS*, *SQL*, *Python* |
 
 
 | Machine Learning <img width=170/> | | |
 | --- |:-----:|:---:|
-| Airbnb Location Score Prediction | [Link](https://github.com/epaunonen/epaunonen.github.io/edit/main/README.md#airbnb-location-score-prediction) | *Python*, *Classification*, *Clustering*, *Regression* |
-| Room Occupancy Classification | [Link](https://github.com/epaunonen/epaunonen.github.io/edit/main/README.md#room-occupancy-classification) | *Python* |
+| Airbnb Location Score Prediction | [Link](https://github.com/epaunonen/epaunonen.github.io/blob/main/README.md#airbnb-location-score-prediction) | *Python*, *Classification*, *Clustering*, *Regression* |
+| Room Occupancy Classification | [Link](https://github.com/epaunonen/epaunonen.github.io/blob/main/README.md#room-occupancy-classification) | *Python* |
 
 
 | Standalone Projects <img width=155/> | | <img width=307/> |
 | --- |:-----:|:---:|
-| Python Telegram bot for event submissions | [Link](https://github.com/epaunonen/epaunonen.github.io/edit/main/README.md#lihys-little-helper-python-telegram-bot-for-event-submissions) | *Python*, *Google APIs*, *AWS* |
-| FixAr: Fixed-point arithmetic library for C# | [Link](https://github.com/epaunonen/epaunonen.github.io/edit/main/README.md#fixar-fixed-point-arithmetic-library-for-c) | *C#* |
+| Python Telegram bot for event submissions | [Link](https://github.com/epaunonen/epaunonen.github.io/blob/main/README.md#lihys-little-helper-python-telegram-bot-for-event-submissions) | *Python*, *Google APIs*, *AWS* |
+| FixAr: Fixed-point arithmetic library for C# | [Link](https://github.com/epaunonen/epaunonen.github.io/blob/main/README.md#fixar-fixed-point-arithmetic-library-for-c) | *C#* |
 
 <br>
 
