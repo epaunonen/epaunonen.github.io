@@ -66,7 +66,7 @@ Possibilities for further improvement are also identified in the analysis.
 
 ---
 ### Room Occupancy Classification
-[**View Notebook on Github**](https://github.com/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20classification/Room_occupancy.ipynb) | [**nbviewer**](https://nbviewer.org/github/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20classification/Room_occupancy.ipynb)
+[**View Notebook on GitHub**](https://github.com/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20classification/Room_occupancy.ipynb) | [**nbviewer**](https://nbviewer.org/github/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20classification/Room_occupancy.ipynb)
 <br><br>
 ![Room occupancy](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Room%20occupancy/img1.PNG)
 
