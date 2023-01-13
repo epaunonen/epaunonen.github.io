@@ -107,7 +107,7 @@ The bot was developed using Python with [python-telegram-bot](https://github.com
 ---
 ### FixAr: *Fixed-point arithmetic library for C#*
 
-[**View Code**](https://github.com/epaunonen/epaunonen.github.io/tree/main/Projects/FixAr%20C%23)
+[**View Code**](https://github.com/epaunonen/FixAr)
 
 FixAr is a fixed point arithmetic library written in C# that is designed for fast paced simulations which require platform independent, deterministic calculations, in situations where lower level code cannot be used.
 
