@@ -52,7 +52,7 @@ Learning goals for this project:
 ### Airbnb Location score prediction
 [**View Notebook on GitHub**](https://github.com/epaunonen/epaunonen.github.io/blob/main/Notebooks/Airbnb%20location%20score%20prediction/location_score_prediction.ipynb) | [**nbviewer**](https://nbviewer.org/github/epaunonen/epaunonen.github.io/blob/main/Notebooks/Airbnb%20location%20score%20prediction/location_score_prediction.ipynb)
 <br><br>
-![Airbnb ML](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Airbnb/airbnb1.PNG "Result")
+![Airbnb ML](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Airbnb/airbnb1.PNG?raw=true "Result")
 
 In this project Airbnb data from Italy is explored, processed and analyzed with the goal of creating a model that predicts the location review score of an Airbnb listing. Airbnb listings are ranked based on 7 different review score types, one of which is the location. The analysis shows that customers tend to assess the location somewhat independent of the other categories (which are heavily correlated with each other) meaning that an accurate prediction of a location score can be used as a decision making tool when e.g. purchasing property to be listed on Airbnb.
 
@@ -68,7 +68,7 @@ Possibilities for further improvement are also identified in the analysis.
 ### Room Occupancy Classification
 [**View Notebook on GitHub**](https://github.com/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20classification/Room_occupancy.ipynb) | [**nbviewer**](https://nbviewer.org/github/epaunonen/epaunonen.github.io/blob/main/Notebooks/Room%20occupancy%20classification/Room_occupancy.ipynb)
 <br><br>
-![Room occupancy](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Room%20occupancy/img1.PNG)
+![Room occupancy](https://github.com/epaunonen/epaunonen.github.io/blob/main/Assets/Room%20occupancy/img1.PNG?raw=true)
 
 This simple project was created as the final project for the course Machine Learning: Basic Principles at Aalto University. 
 Here room occupancy count (0-3 people) is estimated using Logistic Regression and MLP. <br>
