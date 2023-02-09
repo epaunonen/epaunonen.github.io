@@ -10,7 +10,7 @@
 | Machine Learning <img width=170/> | | |
 | --- |:-----:|:---:|
 | Airbnb Location Score Prediction | [Link](https://github.com/epaunonen/epaunonen.github.io/blob/main/README.md#airbnb-location-score-prediction) | *Python*, *Classification*, *Clustering*, *Regression* |
-| Room Occupancy Classification | [Link](https://github.com/epaunonen/epaunonen.github.io/blob/main/README.md#room-occupancy-classification) | *Python* |
+| Room Occupancy Classification | [Link](https://github.com/epaunonen/epaunonen.github.io/blob/main/README.md#room-occupancy-classification) | *Python*, *Classification* |
 
 
 | Standalone Projects <img width=155/> | | <img width=307/> |
