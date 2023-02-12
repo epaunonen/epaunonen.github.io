@@ -1,4 +1,7 @@
-# Data and Programming Portfolio
+# Data and Programming Portfolio by *Eemeli Paunonen*
+
+[Return to GitHub profile](https://github.com/epaunonen)
+
 <p>This portfolio is a compilation of notebooks, dashboards and other projects which I have created for data analysis, exploring machine learning or a specific application. A summary of each project as well as the applicable learning goals are provided with the projects. The projects are categorized by type:</p>
 
 
